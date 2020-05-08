@@ -1,6 +1,9 @@
 package guruspringframework.sfgdi;
 
+import guruspringframework.sfgdi.controllers.ConstructorInjectedController;
 import guruspringframework.sfgdi.controllers.MyController;
+import guruspringframework.sfgdi.controllers.PropertyInjectedController;
+import guruspringframework.sfgdi.controllers.SetterInjectedController;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
@@ -21,6 +24,31 @@ public class SfgDiApplication {
 
 		String greeting = myController.sayHello();
 		System.out.println(greeting);
+
+		System.out.println("property");
+
+		PropertyInjectedController propertyInjectedController =
+				(PropertyInjectedController) ctx.getBean("propertyInjectedController");
+		System.out.println(propertyInjectedController.getGreeting());
+		/* This wont work because of 2 things:
+		 * propertyInjectedController is not annotated as Controller,
+		 * there is a NullPointerException being thrown because
+		 * GreetingServiceImpl does not have @Service annotation
+		 * Also, greetingService in this particular controller need to be @Autowired
+		 * it means an instance of greetingService will be injected
+		 */
+
+		System.out.println("setter");
+		SetterInjectedController setterInjectedController =
+				(SetterInjectedController) ctx.getBean("setterInjectedController");
+		System.out.println(setterInjectedController.getGreeting());
+		//Same thing again here - 2 annotations added, @Autowired and @Controller
+
+		System.out.println("constructor");
+		ConstructorInjectedController constructorInjectedController =
+				(ConstructorInjectedController) ctx.getBean("constructorInjectedController");
+		System.out.println(constructorInjectedController.getGreeting());
+		//Situation here is a litte different: @Autowired is OPTIONAL
 	}
 
 }
