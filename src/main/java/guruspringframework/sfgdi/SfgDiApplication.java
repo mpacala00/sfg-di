@@ -1,9 +1,6 @@
 package guruspringframework.sfgdi;
 
-import guruspringframework.sfgdi.controllers.ConstructorInjectedController;
-import guruspringframework.sfgdi.controllers.MyController;
-import guruspringframework.sfgdi.controllers.PropertyInjectedController;
-import guruspringframework.sfgdi.controllers.SetterInjectedController;
+import guruspringframework.sfgdi.controllers.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
@@ -17,6 +14,10 @@ public class SfgDiApplication {
 		//SpringApplication.run(SfgDiApplication.class, args);
 		//a way to get a handle of the spring app context
 		ApplicationContext ctx = run(SfgDiApplication.class, args);
+
+		I18NController i18NController = (I18NController) ctx.getBean("i18NController");
+		System.out.println(i18NController.sayHello());
+
 
 		//beans are named after classes but begin with a lower case
 		//You have to cast otherwise it returns object type
