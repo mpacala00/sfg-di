@@ -1,10 +1,8 @@
 package guruspringframework.sfgdi.controllers;
 
-import guruspringframework.sfgdi.services.GreetingServiceImpl;
+import guruspringframework.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 //Test by properties - not the recommended method
 class PropertyInjectedControllerTest {
@@ -16,7 +14,7 @@ class PropertyInjectedControllerTest {
     void setUp() {
         controller = new PropertyInjectedController();
 
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorGreetingService();
     }
 
     //Green arrow on the left to run the test
