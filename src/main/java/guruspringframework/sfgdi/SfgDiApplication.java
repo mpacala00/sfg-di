@@ -22,8 +22,8 @@ public class SfgDiApplication {
 		//You have to cast otherwise it returns object type
 		MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
-		System.out.println(greeting);
+		System.out.println("primary bean");
+		System.out.println(myController.sayHello());
 
 		System.out.println("property");
 
