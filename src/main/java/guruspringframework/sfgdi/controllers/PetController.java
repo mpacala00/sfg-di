@@ -1,6 +1,6 @@
-package guru.springframework.sfgdi.controllers;
+package guruspringframework.sfgdi.controllers;
 
-import guru.springframework.sfgdi.services.PetService;
+import guruspringframework.sfgdi.services.PetService;
 
 /**
  * Created by jt on 12/28/19.

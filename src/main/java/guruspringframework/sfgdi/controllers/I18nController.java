@@ -1,6 +1,6 @@
-package guru.springframework.sfgdi.controllers;
+package guruspringframework.sfgdi.controllers;
 
-import guru.springframework.sfgdi.services.GreetingService;
+import guruspringframework.sfgdi.services.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
