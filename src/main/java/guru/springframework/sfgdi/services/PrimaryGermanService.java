@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 /**
  * Created by jt on 12/27/19.
  */
-@Profile("DE")
-@Service
-@Primary
 public class PrimaryGermanService implements GreetingService {
 
     public GreetingRepository greetingRepository;
@@ -20,6 +17,6 @@ public class PrimaryGermanService implements GreetingService {
 
     @Override
     public String sayGreeting() {
-        return "Hallo Welt - DE";
+        return greetingRepository.getGermanGreeting();
     }
 }
