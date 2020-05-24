@@ -1,0 +1,6 @@
+#Spacing is extremly important
+guru:
+  jms:
+    username: JMS Username
+    password: ymlpassword
+    dburl: ymldburl

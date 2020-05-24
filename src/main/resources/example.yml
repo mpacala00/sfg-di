@@ -1,0 +1,31 @@
+#this is a comment
+#Name property
+name: John
+
+#Array of names
+names:
+  - John
+  - Paul
+  - Ringo
+
+book:
+  author: Joe Buck
+  publisher: Some Publisher
+
+truth: yes
+another_truth: True
+more_true: true
+
+false: no #No, False, false
+
+string_val: "String value :-)"
+
+include_new_line: |
+  haha haha
+  this will include
+  new lines
+
+ignore_new_lines: >
+  this will be a long
+  long string without
+  the new lines
