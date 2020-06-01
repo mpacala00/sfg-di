@@ -4,3 +4,12 @@ guru:
     username: JMS Username
     password: ymlpassword
     dburl: ymldburl
+
+#file separation
+---
+#specific properties for a profile
+spring:
+  profiles: de
+guru:
+  jms:
+    username: JMS Username GERMAN
